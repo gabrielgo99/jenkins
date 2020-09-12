@@ -1,23 +1,15 @@
 pipeline {
   agent any
   stages {
-    stage('Fluffy Build') {
+    stage('Buzz Build') {
       steps {
-        sh 'sleep 5'
-        sh 'echo Success!'
-        sh 'echo Edited Placeholder.'
+        sh './jenkins/build.sh'
       }
     }
 
-    stage('Fluffy Test') {
+    stage('Buzz Test') {
       steps {
-        echo 'Fluffy Test'
-      }
-    }
-
-    stage('Fluffy Deploy') {
-      steps {
-        echo 'Fluffy Deploy'
+        sh './jenkins/test-all.sh'
       }
     }
 

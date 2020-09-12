@@ -5,7 +5,7 @@ pipeline {
       steps {
         sh 'sleep 5'
         sh 'echo Success!'
-        sh 'echo Another Placeholder.'
+        sh 'echo Edited Placeholder.'
       }
     }
 
